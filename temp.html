@@ -33,7 +33,7 @@
 
 
 <!-- Personal details -->
-            <fieldset>
+            <fieldset id="pageone">
                 <h2 class="fs-title">Personal Details</h2>
 
                 <table cellspacing="10" width="100%">
@@ -44,103 +44,100 @@
                                         <option>Mr.</option>
                                         <option>Ms.</option>
                                         <option>Dr.</option>
-                                   </select> 
+                                </select> 
                                 </div>
                             </td>
-                            <td><input type="text" name="fname" placeholder="First Name" required/> </td>
-                            <td><input type="text" name="lname" placeholder="Last Name"required/></td>
+                            <td><input type="text" class="required" id=fname name="fname" placeholder="First Name*"/> </td>
+                            <td><input type="text" class="required" id=lname name="lname" placeholder="Last Name*"/></td>
                         </tr>
                 </table>
-                <h5 align="left" >Date of Birth</h5>
-                <input type="date" name="dob"/><br><br> 
-                <h5 align="left" style="word-spacing: 350px" >Gender</h5>
+                <h5 align="left" >Date of Birth*</h5>
+                <input type="date" class="required" id=dob name="dob"/><br><br> 
+                <h5 align="left" style="word-spacing: 350px" >Gender*</h5>
                 <table cellspacing="10"  style="padding-right: 100px;" >
                     <th><h5>Male</h5></th>
                     <th><h5>Female</h5></th>                        
                     <tr>
-                        <td><input type="radio" name="gender" value="Male"></td>
-                        <td><input type="radio" name="gender" value="Female"></td>
+                        <td><input type="radio" class="required" id=male name="gender" value="Male"></td>
+                        <td><input type="radio" class="required" id=female name="gender" value="Female"></td>
                     </tr>       
                 </table>
                 <h5 align="left" style="word-spacing:350px">Address</h5>
                 <table class="addressbar" cellspacing="10">
-                    <th><h5 align="left">Present/Communication</h5></th>
-                    <th><h5 align="left">Permanent</h5></th>
+                    <th><h5 align="left">Present/Communication*</h5></th>
+                    <th><h5 align="left">Permanent*</h5></th>
                     <tr>
-                        <td><textarea name="tempaddress" rows="3" placeholder="Enter your address" ></textarea></td>
-                        <td><textarea name="permanentaddress" rows="3" placeholder="Enter your permenant address"></textarea></td>
+                        <td><input type="text" class="required" id=tempadd name="tempaddress" rows="3" placeholder="Enter your address*" ></textarea></td>
+                        <td><input type="text" class="required" id=permadd name="permanentaddress" rows="3" placeholder="Enter your address*"></textarea></td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="city" placeholder="City"/>
-                            <input type="text" name="pincode" placeholder="Pin code"/>
+                            <input type="text" class="required" id=tempcity name="city" placeholder="City*"/>
+                            <input type="text" class="required" id=temppin name="pincode" placeholder="Pin code*"/>
                         </td>
                         <td>
-                            <input type="text" name="city" placeholder="City"/>
-                            <input type="text" name="pincode" placeholder="Pin code"/>
+                            <input type="text" class="required" id=permcity name="city" placeholder="City*"/>
+                            <input type="text" class="required" id=permpin name="pincode" placeholder="Pin code*"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" name="mobile" placeholder="Mobile number"/>
+                            <input type="text" class="required" id=tempmobile name="mobile" placeholder="Mobile number*"/>
                             <input type="text" name="phone" placeholder="Phone number"/>
                             <input type="email" name="email" placeholder="E-mail"/>
                         </td>
                         <td>
-                            <input type="text" name="mobile" placeholder="Mobile number"/>
+                            <input type="text" class="required" id=permmobile name="mobile" placeholder="Mobile number*"/>
                             <input type="text" name="phone" placeholder="Phone number"/>
                             <input type="email" name="email" placeholder="E-mail"/>
                         </td>
                     </tr>
                 </table>
-                <input type="button" name="next" class="next action-button" value="Next"/>
-            </fieldset> 
+                <input type="button" id="btone" name="next" class="next action-button" value="Next" disabled/>
+            </fieldset>  
             
 <!-- General Information-->
-            <fieldset>
+            <fieldset id="pagetwo">
                 <h2 class="fs-title">General Information</h2>
                 <table cellspacing="10" width="100%">
                     <tr>
-                        <input type="text" name="college" placeholder="Name of the college">
-                    </tr>
-                    <tr>
-                        <td><input type="text" name="com" placeholder="Course of study" ></td>
-                        <td><input type="text" name="com" placeholder="Year of completion"></td>
+                        <td><input type="text" class="required" id=course name="com" placeholder="Course of study*" ></td>
+                        <td><input type="text" class="required" id=comp name="com" placeholder="Year of completion*"></td>
                     </tr>
                 </table>
                 <table cellspacing="10" width="75%">
-                    <td><h4 align="left">Are you a member of any Social Organization or Professional Body?</h4></td>
-                    <td align="center"><h5>YES</h5><input type="radio" name="member" value="Yes"></td>
-                    <td align="center"><h5>NO</h5><input type="radio" name="member" value="No"></td>
+                    <td><h4 align="left">Are you a member of any Social Organization or Professional Body?*</h4></td>
+                    <td align="center"><h5>YES</h5><input type="radio" class="required" id=yes name="member" value="Yes"></td>
+                    <td align="center"><h5>NO</h5><input type="radio" class="required" id=no name="member" value="No"></td>
                 </table>
             
                 <h4 align="left">Your interests/hobbies?</h4><br>
                 <table cellpadding="10px" >
-                    <tr><td style="padding-left: 20px" ><input type="text" name="s1" placeholder="Interest/Hobby" ></td></tr>
+                    <tr><td style="padding-left: 20px" ><input type="text" class="required" id=hobby name="s1" placeholder="Interest/Hobby*" ></td></tr>
                     <tr><td style="padding-left: 20px" ><input type="text" name="s2" placeholder="Interest/Hobby" ></td></tr>
                     <tr><td style="padding-left: 20px" ><input type="text" name="s3" placeholder="Interest/Hobby" ></td></tr>
                     <tr><td style="padding-left: 20px" ><input type="text" name="s4" placeholder="Interest/Hobby" ></td></tr>
                 </table>
                 
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+                <input type="button" id="bttwo" name="next" class="next action-button" value="Next" disabled/>
             </fieldset>
 
 <!-- Files upload -->
-            <fieldset>
+            <fieldset id="pagethree">
                 <h2 class="fs-title">Files Upload</h2>
                 <h3 class="fs-subtitle">Upload your passport size photo and signature here</h3>
                 <table cellspacing="10" width="100%">
-                    <tr><td><h4>Passport size photograph</h4><input type="file" name="photo" accept="image/*"></td></tr>
-                    <tr><td><h4>Signature</h4><input type="file" name="sign" accept="image/*"></td></tr>
+                    <tr><td><h4>Passport size photograph</h4><input type="file" id=photo name="photo" accept="image/*"></td></tr>
+                    <tr><td><h4>Signature</h4><input type="file" id=sign name="sign" accept="image/*"></td></tr>
                 </table>
 
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="button" name="next" class="next action-button" value="Next"/>
+                <input type="button" id="btthree" name="next" class="next action-button" value="Next" disabled/>
             </fieldset>
 
 <!-- Submit -->
-            <fieldset>
+            <fieldset id="pagefour">
                 <h2 class="fs-title">Declaration</h2>
                 <h3 class="fs-subtitle">Accept declaration and proceed to payment</h3>
                 <div>
@@ -148,10 +145,10 @@
                         I have familiarized myself with the Mission, and objectives of Engineers Without Borders - India on the EWB-INDIA website (www.ewb-india.org) and I pledge to abide by the responsibilities and obligations associated with EWB-INDIA bonafide membership.
                     </h3>
                 </div>
-                <input type="checkbox" id="declare" name="declare" value="Agreed">
+                <input type="checkbox" class="required" id="agree" name="declare" value="Agreed">
                 <label for="declare"> I Agree</label><br>
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
-                <input type="submit" name="submit" class="submit action-button" value="Submit"/>
+                <input type="submit" id=submit name="submit" class="submit action-button" value="Submit"/>
             </fieldset>
         </form>
     </div>
