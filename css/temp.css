@@ -71,7 +71,7 @@ body {
 /*buttons*/
 #msform .action-button {
     width: 100px;
-    background: #0000FF;
+    background: #C5C5F1;
     font-weight: bold;
     color: white;
     border: 0 none;
@@ -87,7 +87,7 @@ body {
 
 #msform .action-button-previous {
     width: 100px;
-    background: #C5C5F1;
+    background: #0000FF;
     font-weight: bold;
     color: white;
     border: 0 none;

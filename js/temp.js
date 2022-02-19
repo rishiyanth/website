@@ -91,14 +91,82 @@ $("#pageone").ready(function() {
 		var pin1= $('#temppin').val();
 		var city2= $('#permcity').val();
 		var pin2= $('#permpin').val();
-		var mob1= $('#tempmmobile').val();
+		var mob1= $('#tempmobile').val();
 		var mob2= $('#permmobile').val();
 		var m= $('#male').is(':checked');
-		var f= $('#female').is(':checked')
-        if(fn!= '' && ln!= '' && db!= '' && add1!= '' && add2!= '' && city1!= '' && pin1!= '' && city2!= '' && pin2!= '' && mob1!= '' && mob2!= '' && (m||f)) {
-            $('#btone').prop('disabled', false);
+		var f= $('#female').is(':checked');
+		var phone1= $('#tempphone').val(); 
+		var phone2= $('#permphone').val();
+		var email1= $('#tempemail').val();
+		var email2= $('#permemail').val();
+		var s1= $('#saveone').is(':checked');
+			
+        if(fn!= '' && ln!= '' && db!= '' && add1!= '' && add2!= '' && city1!= '' && pin1!= '' && city2!= '' && pin2!= '' && mob1!= '' && mob2!= '' && phone1!= '' && phone2!= '' && email1!= '' && email2!= '' && (m||f) && s1) {
+			$('#btone').prop('disabled', false);
+			$("#btone").css({"background-color":"#0000FF"});
         } else {
+			if(fn.length>2 )
+				$("#fname").css({"background-color":"#98FB98"});
+			else
+				$("#fname").css({"background-color":""});
+			if(ln.length>=1)
+				$("#lname").css({"background-color":"#98FB98"});
+			else
+				$("#lname").css({"background-color":""});
+			if(db.length)
+				$("#dob").css({"background-color":"#98FB98"});	
+			else
+				$("#dob").css({"background-color":""});
+			if(add1.length>=1)
+				$("#tempadd").css({"background-color":"#98FB98"});
+			else
+				$("#tempadd").css({"background-color":""});
+			if(add2.length>=1)
+				$("#permadd").css({"background-color":"#98FB98"});
+			else
+				$("#permadd").css({"background-color":""});
+			if(city1.length>=1)
+				$("#tempcity").css({"background-color":"#98FB98"});
+			else
+				$("#tempcity").css({"background-color":""});
+			if(city2.length>=1)
+				$("#permcity").css({"background-color":"#98FB98"});
+			else
+				$("#permcity").css({"background-color":""});
+			if(pin1.length==6 && onlyDigits(pin1))
+				$("#temppin").css({"background-color":"#98FB98"});
+			else
+				$("#temppin").css({"background-color":""});
+			if(pin2.length==6 && onlyDigits(pin2))
+				$("#permpin").css({"background-color":"#98FB98"});
+			else
+				$("#permpin").css({"background-color":""});
+			if(mob1.length==10 && onlyDigits(mob1))
+				$("#tempmobile").css({"background-color":"#98FB98"});
+			else
+				$("#tempmobile").css({"background-color":""});
+			if(mob2.length==10 && onlyDigits(mob2))
+				$("#permmobile").css({"background-color":"#98FB98"});
+			else
+				$("#permmobile").css({"background-color":""});
+			if(phone1.length>5 && onlyDigits(phone1))
+				$("#tempphone").css({"background-color":"#98FB98"});
+			else
+				$("#tempphone").css({"background-color":""});
+			if(phone2.length>5 && onlyDigits(phone2))
+				$("#permphone").css({"background-color":"#98FB98"});
+			else
+				$("#permphone").css({"background-color":""});
+			if(email1.length>1)
+				$("#tempemail").css({"background-color":"#98FB98"});
+			else
+				$("#tempemail").css({"background-color":""});
+			if(email2.length>1)
+				$("#permemail").css({"background-color":"#98FB98"});
+			else
+				$("#permemail").css({"background-color":""});
             $('#btone').prop('disabled', true);
+			$("#btone").css({"background-color":"#C5C5F1"});
         }
     });
 });
@@ -110,10 +178,27 @@ $("#pagetwo").ready(function() {
 		var yes= $('#yes').is(':checked');
 		var no= $('#no').is(':checked')
 		var hobby= $('#hobby').val();
-        if(course!='' && yoc!='' && hobby!='' && (yes||no)) {
+		var s2= $('#savetwo').is(':checked');
+        if(course!='' && yoc!='' && hobby!='' && (yes||no) && s2) {
             $('#bttwo').prop('disabled', false);
+			$("#bttwo").css({"background-color":"#0000FF"});
         } else {
+			if(course.length>2)
+				$("#course").css({"background-color":"#98FB98"});
+			else
+				$("#course").css({"background-color":""});
+			
+			if(yoc.length>2)
+				$("#comp").css({"background-color":"#98FB98"});
+			else
+				$("#comp").css({"background-color":""});
+			
+			if(hobby.length>2)
+				$("#hobby").css({"background-color":"#98FB98"});
+			else
+				$("#hobby").css({"background-color":""});
             $('#bttwo').prop('disabled', true);
+			$("#bttwo").css({"background-color":"#C5C5F1"});
         }
     });
 });
@@ -122,10 +207,13 @@ $("#pagethree").ready(function() {
 	$('input:file').on('change', function(){
 		var photo= $('#photo').val();
 		var sign= $('#sign').val();
-		if(photo && sign) {
+		var s3= $('#savethree').is(':checked');
+		if(photo && sign && s3) {
 			$('#btthree').prop('disabled', false);
+			$("#btthree").css({"background-color":"#0000FF"});
 		} else {
 			$('#btthree').prop('disabled', true);
+			$("#btthree").css({"background-color":"#C5C5F1"});
 		}
 	});
 });
@@ -135,8 +223,26 @@ $("#pagefour").ready(function() {
 		var agree= $('#agree').is(':checked');
         if(agree) {
             $('#submit').prop('disabled', false);
+			$("#submit").css({"background-color":"#0000FF"});
         } else {
             $('#submit').prop('disabled', true);
+			$("#submit").css({"background-color":"#C5C5F1"});
         }
     });
 });
+
+/*function changecolor(object){
+	var object = $(obj);
+	if(object.length>2)
+		object.css({"background-color":"#98FB98"});
+	else
+		object.css({"background-color":"#ffcccb"});		
+}*/
+
+function onlyDigits(s) {
+	for (let i = s.length - 1; i >= 0; i--) {
+	  const d = s.charCodeAt(i);
+	  if (d < 48 || d > 57) return false
+	}
+	return true
+  }

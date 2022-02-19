@@ -47,8 +47,8 @@
                                 </select> 
                                 </div>
                             </td>
-                            <td><input type="text" class="required" id=fname name="fname" placeholder="First Name*"/> </td>
-                            <td><input type="text" class="required" id=lname name="lname" placeholder="Last Name*"/></td>
+                            <td><input type="text" class="required" id=fname name="fname" placeholder="First Name*" minlength="2"/> </td>
+                            <td><input type="text" class="required" id=lname name="lname" placeholder="Last Name*" minlength="2"/></td>
                         </tr>
                 </table>
                 <h5 align="left" >Date of Birth*</h5>
@@ -67,32 +67,34 @@
                     <th><h5 align="left">Present/Communication*</h5></th>
                     <th><h5 align="left">Permanent*</h5></th>
                     <tr>
-                        <td><input type="text" class="required" id=tempadd name="tempaddress" rows="3" placeholder="Enter your address*" ></textarea></td>
-                        <td><input type="text" class="required" id=permadd name="permanentaddress" rows="3" placeholder="Enter your address*"></textarea></td>
+                        <td><input type="text" class="required" id=tempadd name="tempaddress" placeholder="Enter your address(max. 100)*" maxlength="100"></td>
+                        <td><input type="text" class="required" id=permadd name="permanentaddress" placeholder="Enter your address(max. 100)*" maxlength="100"></td>
                     </tr>
                     <tr>
                         <td>
                             <input type="text" class="required" id=tempcity name="city" placeholder="City*"/>
-                            <input type="text" class="required" id=temppin name="pincode" placeholder="Pin code*"/>
+                            <input type="text" class="required" id=temppin name="pincode" placeholder="Pin code*" maxlength="6"/>
                         </td>
                         <td>
                             <input type="text" class="required" id=permcity name="city" placeholder="City*"/>
-                            <input type="text" class="required" id=permpin name="pincode" placeholder="Pin code*"/>
+                            <input type="text" class="required" id=permpin name="pincode" placeholder="Pin code*" maxlength="6"/>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="text" class="required" id=tempmobile name="mobile" placeholder="Mobile number*"/>
-                            <input type="text" name="phone" placeholder="Phone number"/>
-                            <input type="email" name="email" placeholder="E-mail"/>
+                            <input type="text" class="required" id=tempmobile name="mobile" placeholder="Mobile number*" maxlength="10"/>
+                            <input type="text" class="required" id=tempphone name="phone" placeholder="Phone number"/>
+                            <input type="email" class="required" id=tempemail name="email" placeholder="E-mail"/>
                         </td>
                         <td>
-                            <input type="text" class="required" id=permmobile name="mobile" placeholder="Mobile number*"/>
-                            <input type="text" name="phone" placeholder="Phone number"/>
-                            <input type="email" name="email" placeholder="E-mail"/>
+                            <input type="text" class="required" id=permmobile name="mobile" placeholder="Mobile number*" maxlength="10"/>
+                            <input type="text" class="required" id=permphone name="phone" placeholder="Phone number"/>
+                            <input type="email" class="required" id=permemail name="email" placeholder="E-mail"/>
                         </td>
                     </tr>
                 </table>
+                <h5 align="center">Save</h5>
+                <input type="checkbox" id="saveone" class="required">
                 <input type="button" id="btone" name="next" class="next action-button" value="Next" disabled/>
             </fieldset>  
             
@@ -118,7 +120,8 @@
                     <tr><td style="padding-left: 20px" ><input type="text" name="s3" placeholder="Interest/Hobby" ></td></tr>
                     <tr><td style="padding-left: 20px" ><input type="text" name="s4" placeholder="Interest/Hobby" ></td></tr>
                 </table>
-                
+                <h5 align="center">Save</h5>
+                <input type="checkbox" id="savetwo" class="required">
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" id="bttwo" name="next" class="next action-button" value="Next" disabled/>
             </fieldset>
@@ -131,7 +134,8 @@
                     <tr><td><h4>Passport size photograph</h4><input type="file" id=photo name="photo" accept="image/*"></td></tr>
                     <tr><td><h4>Signature</h4><input type="file" id=sign name="sign" accept="image/*"></td></tr>
                 </table>
-
+                <h5 align="center">Save</h5>
+                <input type="checkbox" id=savethree class="required">
                 <input type="button" name="previous" class="previous action-button-previous" value="Previous"/>
                 <input type="button" id="btthree" name="next" class="next action-button" value="Next" disabled/>
             </fieldset>
