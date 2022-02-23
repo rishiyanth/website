@@ -95,13 +95,11 @@ $("#pageone").ready(function() {
 		var mob2= $('#permmobile').val();
 		var m= $('#male').is(':checked');
 		var f= $('#female').is(':checked');
-		var phone1= $('#tempphone').val(); 
-		var phone2= $('#permphone').val();
 		var email1= $('#tempemail').val();
 		var email2= $('#permemail').val();
 		var s1= $('#saveone').is(':checked');
 		console.log("First name:" + fn);
-        if(fn!= '' && ln!= '' && db!= '' && add1!= '' && add2!= '' && city1!= '' && pin1!= '' && city2!= '' && pin2!= '' && mob1!= '' && mob2!= '' && phone1!= '' && phone2!= '' && email1!= '' && email2!= '' && (m||f) && s1) {
+        if(fn!= '' && ln!= '' && db!= '' && add1!= '' && add2!= '' && city1!= '' && pin1!= '' && city2!= '' && pin2!= '' && mob1!= '' && mob2!= '' && email1!= '' && email2!= '' && (m||f) && s1) {
 			$('#btone').prop('disabled', false);
 			$("#btone").css({"background-color":"#0000FF"});
         } else {
@@ -149,14 +147,6 @@ $("#pageone").ready(function() {
 				$("#permmobile").css({"background-color":"#98FB98"});
 			else
 				$("#permmobile").css({"background-color":""});
-			if(phone1.length>5 && onlyDigits(phone1))
-				$("#tempphone").css({"background-color":"#98FB98"});
-			else
-				$("#tempphone").css({"background-color":""});
-			if(phone2.length>5 && onlyDigits(phone2))
-				$("#permphone").css({"background-color":"#98FB98"});
-			else
-				$("#permphone").css({"background-color":""});
 			if(email1.length>1)
 				$("#tempemail").css({"background-color":"#98FB98"});
 			else
@@ -173,7 +163,7 @@ $("#pageone").ready(function() {
 
 $("#pagetwo").ready(function() {
     $('.required').on('input change', function() {
-		var course= $('#course').val();
+		var course= $('#course option:selected').val();
 		var yoc= $('#comp').val();
 		var yes= $('#yes').is(':checked');
 		var no= $('#no').is(':checked')
@@ -183,12 +173,7 @@ $("#pagetwo").ready(function() {
         if(course!='' && yoc!='' && hobby!='' && (yes||no) && s2) {
             $('#bttwo').prop('disabled', false);
 			$("#bttwo").css({"background-color":"#0000FF"});
-        } else {
-			if(course.length>2)
-				$("#course").css({"background-color":"#98FB98"});
-			else
-				$("#course").css({"background-color":""});
-			
+        } else {	
 			if(yoc.length>2)
 				$("#comp").css({"background-color":"#98FB98"});
 			else

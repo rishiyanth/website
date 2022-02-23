@@ -29,22 +29,23 @@
                 <li>Declaration</li>
                 <li>Payment</li>
             </ul>
+            <h5 style="color: blue;">Fields marked with * are required</h5>
+            <br>
             <!-- fieldsets -->
 
 
 <!-- Personal details -->
             <fieldset id="pageone">
                 <h2 class="fs-title">Personal Details</h2>
-
                 <table cellspacing="10" width="100%">
                         <tr>
                             <td>
                                 <div class="dropdown">
-                                    <select style="font-size: 20px;" >
+                                    <select style="font-size: 15px;" >
                                         <option>Mr.</option>
                                         <option>Ms.</option>
                                         <option>Dr.</option>
-                                </select> 
+                                    </select> 
                                 </div>
                             </td>
                             <td><input type="text" class="required" id=fname name="fname" placeholder="First Name*" minlength="2"/> </td>
@@ -83,13 +84,13 @@
                     <tr>
                         <td>
                             <input type="text" class="required" id=tempmobile name="mobile" placeholder="Mobile number*" maxlength="10"/>
-                            <input type="text" class="required" id=tempphone name="phone" placeholder="Phone number*"/>
-                            <input type="email" class="required" id=tempemail name="email" placeholder="E-mail*"/>
+                            <input type="text" id=tempphone name="phone" placeholder="Phone number"/>
+                            <input type="email" class="required" id=tempemail name="email" placeholder="E-mail (College mail) *"/>
                         </td>
                         <td>
-                            <input type="text" class="required" id=permmobile name="mobile" placeholder="Mobile number*" maxlength="10"/>
-                            <input type="text" class="required" id=permphone name="phone" placeholder="Phone number*"/>
-                            <input type="email" class="required" id=permemail name="email" placeholder="E-mail*"/>
+                            <input type="text" class="required" id=permmobile name="mobile" placeholder="Mobile number(Parent) *" maxlength="10"/>
+                            <input type="text" id=permphone name="phone" placeholder="Phone number"/>
+                            <input type="email" class="required" id=permemail name="email" placeholder="E-mail (Personal) *"/>
                         </td>
                     </tr>
                 </table>
@@ -103,8 +104,24 @@
                 <h2 class="fs-title">General Information</h2>
                 <table cellspacing="10" width="100%">
                     <tr>
-                        <td><input type="text" class="required" id=course name="com" placeholder="Course of study*" ></td>
-                        <td><input type="text" class="required" id=comp name="com" placeholder="Year of completion*"></td>
+                        <td>
+                        <div>
+                            <select style="font-size: 15px;" class="required" id="course">
+                                <option value="" disabled selected hidden>Course of Study*</option>
+                                <option value="B.E.(Civil Engineering)">B.E. (Civil Engineering)</option>
+                                <option value="B.E.(Computer Science and Engineering)">B.E. (Computer Science and Engineering)</option>
+                                <option value="B.E.(Electrical and Electronics Engineering)">B.E. (Electrical and Electronics Engineering)</option>
+                                <option value="B.E.(Electronics and Communication Engineering)">B.E. (Electronics and Communication Engineering)</option>
+                                <option value="B.E.(Mechanical Engineering)">B.E. (Mechanical Engineering)</option>
+                                <option value="B.E.(Mechatronics)">B.E. (Mechatronics)</option>
+                                <option value="B.Tech.(Computer Science and Business Systems)">B.Tech. (Computer Science and Business Systems)</option>
+                                <option value="B.Tech.(Information Technology)">B.Tech. (Information Technology)</option>
+                                <option value="B.Arch.(Architecture)">B.Arch. (Architecture)</option>
+                                <option value="M.Sc.(Data Science)">M.Sc. (Data Science)</option>
+                            </select> 
+                        </div>
+                        </td>
+                        <td align="center"><input type="text" class="required" id=comp name="com" placeholder="Year of completion*"></td>
                     </tr>
                 </table>
                 <table cellspacing="10" width="75%">
