@@ -100,7 +100,7 @@ $("#pageone").ready(function() {
 		var email1= $('#tempemail').val();
 		var email2= $('#permemail').val();
 		var s1= $('#saveone').is(':checked');
-			
+		console.log("First name:" + fn);
         if(fn!= '' && ln!= '' && db!= '' && add1!= '' && add2!= '' && city1!= '' && pin1!= '' && city2!= '' && pin2!= '' && mob1!= '' && mob2!= '' && phone1!= '' && phone2!= '' && email1!= '' && email2!= '' && (m||f) && s1) {
 			$('#btone').prop('disabled', false);
 			$("#btone").css({"background-color":"#0000FF"});
@@ -178,6 +178,7 @@ $("#pagetwo").ready(function() {
 		var yes= $('#yes').is(':checked');
 		var no= $('#no').is(':checked')
 		var hobby= $('#hobby').val();
+		var orgname= $('#org').val();
 		var s2= $('#savetwo').is(':checked');
         if(course!='' && yoc!='' && hobby!='' && (yes||no) && s2) {
             $('#bttwo').prop('disabled', false);
@@ -197,6 +198,21 @@ $("#pagetwo").ready(function() {
 				$("#hobby").css({"background-color":"#98FB98"});
 			else
 				$("#hobby").css({"background-color":""});
+			
+			if(yes)
+			{
+				$('#org').prop('disabled', false);
+				if(orgname.length>2)
+					$("#org").css({"background-color":"#98FB98"});
+				else
+					$("#org").css({"background-color":""});
+			}
+			else
+			{
+				$('#org').val("");
+				$('#org').prop('disabled', true);
+				$("#org").css({"background-color":""});
+			}
             $('#bttwo').prop('disabled', true);
 			$("#bttwo").css({"background-color":"#C5C5F1"});
         }
@@ -204,11 +220,10 @@ $("#pagetwo").ready(function() {
 });
 
 $("#pagethree").ready(function() {
-	$('input:file').on('change', function(){
+	$('input:file').on('input change', function(){
 		var photo= $('#photo').val();
 		var sign= $('#sign').val();
-		var s3= $('#savethree').is(':checked');
-		if(photo && sign && s3) {
+		if(photo && sign) {
 			$('#btthree').prop('disabled', false);
 			$("#btthree").css({"background-color":"#0000FF"});
 		} else {

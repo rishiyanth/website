@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0px;
 }
 
 article,
@@ -7759,7 +7759,7 @@ p {
   margin-top: 250px;
 }
 
-nav{
+.navigation{
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -7796,5 +7796,4 @@ nav{
 .nav-links li a.activepage{
   background-color: #21a658;
 }
-
 /*# sourceMappingURL=style.css.map */
