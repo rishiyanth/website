@@ -43,7 +43,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Sanchez:400,400italic' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
 	<!-- Icomoon Icon Fonts-->
@@ -61,18 +61,20 @@
 
 	</head>
 	<body>
-		<nav class="navigation">
-			<div class='logo'>
-				<img src="images/tceewb.png" width="200" height="50">
-			</div>
-			<ul class="nav-links">
-				<li><a class="activepage" href="#">Home</a></li>
-				<li><a href="temp.html">Register</a></li>
-				<li><a href="#">Profile</a></li>
-				<li><a href="#">Contact</a></li>
-				<li><a class="signin">Login</a></li>
-			</ul>
-		</nav>
+		<!--Navigation bar-->
+			<div class="topnav" id="myTopnav">
+				<img src="images/tceewb.png" width="200" height="50">				
+				<a href="#">Login</a>
+				<a href="#contact">Contact</a>
+				<a href="#profile">Profile</a>
+				<a href="temp.html">Register</a>
+				<a href="index.html" class="active">Home</a>
+				<a href="javascript:void(0);" class="icon" onclick="responsive()">
+				<i class="fa fa-bars"></i>
+				</a>
+		  	</div>
+			
+		<!--Header for website-->
 		<header role="banner" id="fh5co-header" style="background-image: url(images/hero-4.jpg);" data-stellar-background-ratio="0.5">
 			<div class="fh5co-overlay"></div>
 			<div class="container">
