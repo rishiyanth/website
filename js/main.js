@@ -398,3 +398,5 @@ function responsive() {
 	  x.className = "topnav";
 	}
   }
+
+console.log("Hi rishi")
